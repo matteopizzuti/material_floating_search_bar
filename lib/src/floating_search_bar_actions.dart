@@ -102,6 +102,8 @@ class FloatingSearchBarAction extends StatelessWidget {
     Color? color,
     bool showIfClosed = true,
     Duration duration = const Duration(milliseconds: 900),
+    String? searchButtonSemanticLabel,
+    String? clearButtonSemanticLabel,
   }) {
     return FloatingSearchBarAction(
       showIfOpened: true,
@@ -127,6 +129,8 @@ class FloatingSearchBarAction extends StatelessWidget {
                       !bar.isOpen || (!bar.hasFocus && bar.isAlwaysOpened);
                 }
               },
+              searchButtonSemanticLabel: searchButtonSemanticLabel,
+              clearButtonSemanticLabel: clearButtonSemanticLabel,
             );
           },
         );
